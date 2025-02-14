@@ -1,26 +1,26 @@
-# Olimpiada Nationala AI - Cluj
+# Spot-the-Mask
 
-Acest repository este dedicat problemelor și soluțiilor propuse pentru Olimpiada Națională de Inteligență Artificială de către echipa din Cluj-Napoca.
+Aceasta este o soluție de bază pentru problema **Spot-the-Mask**, o problemă de **computer vision** care presupune detectarea purtării măștii într-un set de imagini. Soluția urcată pe GitHub este un **schelet de bază**, care obține aproximativ **95%** pe **[https://zindi.africa/competitions/spot-the-mask](https://zindi.africa/competitions/spot-the-mask)**, dar poate fi îmbunătățită semnificativ prin optimizări.
 
-## 📌 Descriere
+## Descrierea Problemei
 
-Scopul acestui repository este de a centraliza problemele propuse de organizatorii și profesorii din Cluj-Napoca, împreună cu soluțiile și testele aferente. Acesta va servi ca resursă de referință pentru corectori si comisie.
+Problema constă în clasificarea imaginilor pentru a determina dacă o persoană poartă sau nu mască. Modelul trebuie antrenat pe un set de imagini etichetate și apoi testat pe un set necunoscut pentru a evalua performanța.
 
-## 🚀 Cum să contribui
+## Structura Soluției
 
-1. Clonează repository-ul:
-   ```bash
-   git clone https://github.com/user/olimpiada-nationala-ai-cluj.git
-   ```
-2. Creează un branch nou pentru problema ta:
-   ```bash
-   git checkout -b nume-problema
-   ```
-3. Adaugă fișierele corespunzătoare în structura indicată.
-4. Fă un commit și un push la schimbările tale:
-   ```bash
-   git add .
-   git commit -m "Adăugat problema X"
-   git push origin nume-problema
-   ```
+Soluția este împărțită în mai multe etape:
 
+1. **Parsarea inputului** – Citirea și procesarea dataset-ului.
+2. **Preprocesarea imaginilor** – Redimensionare, normalizare
+3. **Antrenarea unui model de bază** – Model CNN simplu, cu posibilități de îmbunătățire.
+
+## Modificări pentru Elevi
+
+Pentru a ușura înțelegerea și implementarea, se poate oferi direct dataset-ul organizat în foldere etichetate (`mask/` și `no_mask/`), astfel încât elevii să se concentreze pe antrenarea modelului fără a se preocupa de parsarea inițială a datelor.
+
+## Posibile Îmbunătățiri
+
+- **Arhitecturi mai avansate**: Transfer learning cu modele pre-antrenate (ResNet, MobileNet, EfficientNet)
+- **Augmentare avansată**: Tehnici precum rotații, flip, blur etc.
+- **Optimizarea hiperparametrilor**: Learning rate tuning, batch size tuning
+- **Postprocesare mai inteligentă**: Ensemble learning, threshold tuning
