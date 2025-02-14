@@ -1,26 +1,41 @@
-# Spot-the-Mask
+# Credit Score Challenge
 
-Aceasta este o soluție de bază pentru problema **Spot-the-Mask**, o problemă de **computer vision** care presupune detectarea purtării măștii într-un set de imagini. Soluția urcată pe GitHub este un **schelet de bază**, care obține aproximativ **95%** pe **[https://zindi.africa/competitions/spot-the-mask](https://zindi.africa/competitions/spot-the-mask)**, dar poate fi îmbunătățită semnificativ prin optimizări.
+## Prezentare generală
 
-## Descrierea Problemei
+Setul de date utilizat pentru această provocare provine de la o bancă și conține informații despre utilizatori, având ca scop prezicerea dacă un utilizator este un bun platnic.
 
-Problema constă în clasificarea imaginilor pentru a determina dacă o persoană poartă sau nu mască. Modelul trebuie antrenat pe un set de imagini etichetate și apoi testat pe un set necunoscut pentru a evalua performanța.
+Setul de date este echilibrat pentru nivel de judeteana si ofera elevilor urmatoarele provocari:
 
-## Structura Soluției
+- Gestionarea valorilor lipsă
+- Diferențierea dintre date categorice și numerice
+- Imbalanced data set (but not to heavily imbalanced) 
+- Dimensionalitate mare a datelor
+- Outliers
 
-Soluția este împărțită în mai multe etape:
+## Setul de date
 
-1. **Parsarea inputului** – Citirea și procesarea dataset-ului.
-2. **Preprocesarea imaginilor** – Redimensionare, normalizare
-3. **Antrenarea unui model de bază** – Model CNN simplu, cu posibilități de îmbunătățire.
+Setul de date pentru această problema poate fi găsit aici: [Clasificarea Scorului de Credit](https://www.kaggle.com/datasets/parisrohan/credit-score-classification/data).
 
-## Modificări pentru Elevi
+## Sarcini
 
-Pentru a ușura înțelegerea și implementarea, se poate oferi direct dataset-ul organizat în foldere etichetate (`mask/` și `no_mask/`), astfel încât elevii să se concentreze pe antrenarea modelului fără a se preocupa de parsarea inițială a datelor.
+### Task 1: Explorarea datelor
 
-## Posibile Îmbunătățiri
+1. Câte valori nule sunt prezente în coloana `Amount_Invested_Monthly`?
+2. Care este datoria medie a înregistrărilor care au un `Credit_Utilization_Ratio` mai mare sau egal cu 25?
+3. Câte valori unice există în coloana `Months`?
+4. Câte linii de intrare sunt în `train.csv`? (verificare locală)
 
-- **Arhitecturi mai avansate**: Transfer learning cu modele pre-antrenate (ResNet, MobileNet, EfficientNet)
-- **Augmentare avansată**: Tehnici precum rotații, flip, blur etc.
-- **Optimizarea hiperparametrilor**: Learning rate tuning, batch size tuning
-- **Postprocesare mai inteligentă**: Ensemble learning, threshold tuning
+### Task 2: Construirea modelului
+
+Construieste un model de învățare automată pentru a prezice categoria scorul de credit pentru fiecare înregistrare din setul de date (Poor, Standard, Good). Pentru o dificultate mai redusa, se poate modifica setul pentru o clasificare binara (Poor, Good).
+
+## Sfaturi
+
+- Utilizați tehnici adecvate pentru gestionarea datelor lipsă.
+- Înțelegeți și preprocesați corect caracteristicile categorice și numerice.
+- Abordați dezechilibrul setului de date, dacă este necesar.
+- Luați în considerare selecția sau ingineria caracteristicilor pentru o performanță mai bună a modelului.
+- Alegeți un algoritm de învățare automată potrivit și ajustați-l pentru rezultate optime.
+- Considerati custom thresholds. Merg mai bine?
+- Hyperparam tuning - grid search, optuna etc.
+
