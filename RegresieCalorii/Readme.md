@@ -1,4 +1,4 @@
-# Exemplu de problema (predictia preturilor jocurilor de pe platforma Steam)
+# Predicita consumului caloric
 
 ## Enunt
 Implementati un model de AI pentru a prezice cosumul caloric a unei activitati avand la dispozitie un set de antrenare `dataset_train.csv` si doua pe care trebuie sa faceti doar predictia: `task1_dataset_eval.csv`. si `task2_dataset_eval.csv`
