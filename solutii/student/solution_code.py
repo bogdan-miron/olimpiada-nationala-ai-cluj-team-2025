@@ -39,10 +39,23 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 
 
 #### Now respond
+
+# Read the dataset to predict
 df_predict = pd.read_csv("dataset_predict.csv")
 X_inp = df_predict[['distance_km', 'package_weight_kg', 'traffic_level']]
-X_inp = scaler.transform(X_inp)
 
+# Get the mean and standard deviation of the traffic_level in the X_inp
+mean_traffic = X_inp['traffic_level'].mean()
+std_traffic = X_inp['traffic_level'].std()
+
+# Create a dataset with the mean and standard deviation of the traffic_level then output
+df_stats = pd.DataFrame({"mean_traffic_level" : [mean_traffic], "std_traffic_level" : [std_traffic]})
+
+df_stats = df_stats.round(2)
+df_stats.to_csv("dataset_stats.csv", index=False)
+
+# Scale the input and predict
+X_inp = scaler.transform(X_inp)
 y_out = model.predict(X_inp)
 
 df_predictions = pd.DataFrame(y_out, columns=["on_time"])

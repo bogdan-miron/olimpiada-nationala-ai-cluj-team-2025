@@ -21,8 +21,8 @@ Veți antrena modelul folosind setul de date de antrenament furnizat și apoi ve
    - Modelul vostru va genera predicții pentru aceste eșantioane.
 
 ### Rezultatul Așteptat
-- **P1 (40p): Un fisier CSV cu statistici numit `dataset_stats.csv`**, care sa contina coloanele:
-   - `avg_traffic_level`(20p) - reprezentand media nivelelor de trafic din setul de date pentru predictie
+- **P1 (40p): Un fisier CSV cu statistici numit `dataset_stats.csv`**, care sa contina coloanele urmatoare, cu precizie de 2 decimale:
+   - `mean_traffic_level`(20p) - reprezentand media nivelelor de trafic din setul de date pentru predictie
    - `std_traffic_level` (20p) - reprezentand deviatia standard a aceluiasi camp.
 - **P2 (60p): Fișierul de Predicții:** Un fișier CSV, `dataset_predict.csv` care să includă:
   - O coloană `on_time` cu predicțiile modelului vostru (`1` pentru livrare la timp, `0` pentru întârziere).
