@@ -13,7 +13,7 @@ Setul de date initial pentru această problema poate fi găsit aici: [Clasificar
 ### Task 1: Explorarea datelor
 
 1. Cate linii de intrare sunt in `dataset_train`?
-2. Care este media pentru 'Salariul în mână' ('the monthly base salary of a person') al clienților care au un `Credit_Utilization_Ratio` mai mare sau egal cu 25?
+2. Care este media pentru 'Salariul în mână' ('the monthly in hand salary of a person') al clienților care au un `Credit_Utilization_Ratio` mai mare sau egal cu 25?
 3. Câte valori unice sunt înregistrate pentru atributul `Months`?
 4. Câte valori unice ale atributului `SSN` care se termină în `20` există în dataset?
 
