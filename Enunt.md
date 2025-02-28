@@ -23,4 +23,4 @@ Veți antrena modelul folosind setul de date de antrenament furnizat și apoi ve
 ### Rezultatul Așteptat: Un fisier csv `dataset_predict.csv` care să includă urmatoarele 3 coloane:
 - **P1 (20p)**: `mean_traffic_level`(20p) - reprezentand media nivelelor de trafic din setul de date pentru predictie, precizie de 2 decimale (doar prima linie se i-a in considerare).
 - **P2 (20p)**: `std_traffic_level` (20p) - reprezentand deviatia standard a aceluiasi camp, precizie de 2 decimale  (doar prima linie se i-a in considerare).
-- **P3 (60p): `on_time` - cu predicțiile modelului vostru, `1` pentru livrare la timp, respectiv `0` pentru întârziere.
+- **P3 (60p)**: `on_time` - cu predicțiile modelului vostru, `1` pentru livrare la timp, respectiv `0` pentru întârziere.
