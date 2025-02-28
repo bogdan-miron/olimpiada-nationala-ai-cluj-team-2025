@@ -27,6 +27,7 @@ traffic_level_delayed = np.random.randint(9, 15, num_delayed)             # Traf
 
 # Create DataFrame for on_time deliveries
 df_on_time = pd.DataFrame({
+    "id" : np.arange(1, num_on_time+1),
     "distance_km": np.round(distance_km_on_time, 2),
     "package_weight_kg": np.round(package_weight_kg_on_time, 2),
     "traffic_level": traffic_level_on_time,
@@ -35,6 +36,7 @@ df_on_time = pd.DataFrame({
 
 # Create DataFrame for delayed deliveries
 df_delayed = pd.DataFrame({
+    "id" : np.arange(num_on_time+1, num_samples+1),
     "distance_km": np.round(distance_km_delayed, 2),
     "package_weight_kg": np.round(package_weight_kg_delayed, 2),
     "traffic_level": traffic_level_delayed,

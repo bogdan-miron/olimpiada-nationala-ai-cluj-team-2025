@@ -3,34 +3,49 @@ from sklearn.metrics import accuracy_score, classification_report
 
 from solutii.student.solution_code import mean_traffic
 
-# Load dataset_stats.csv
-df_stats = pd.read_csv("dataset_stats.csv", dtype=float)
-mean_traffic_level = df_stats["mean_traffic_level"].values[0]
-std_traffic_level = df_stats["std_traffic_level"].values[0]
-
-gt_stats = pd.read_csv("dataset_stats_ground_truth.csv", dtype=float)
-mean_traffic_gt = gt_stats["mean_traffic_level"].values[0]
-std_traffic_gt = gt_stats["std_traffic_level"].values[0]
-
-p1_0 = (mean_traffic_gt == mean_traffic_level) * 20.0
-p1_1 = (std_traffic_gt == std_traffic_level) * 20.0
-
-p1_total = p1_0 + p1_1
-# Check if the mean_traffic_level is correct
 
 # Load predictions
 df_sol = pd.read_csv("../solutii/student/dataset_solution.csv")
 df_gt = pd.read_csv("./dataset_ground_truth.csv")
+df_sol.set_index("id", inplace=True)
+df_gt.set_index("id", inplace=True)
 
-# Compute accuracy
-accuracy = accuracy_score(df_sol["on_time"], df_gt["on_time"])
-print(f"Model Accuracy: {accuracy:.3f}")
+
+### Compute the score for P1 and P2
+#################
+mean_traffic_gt = df_gt["mean_traffic_level"].values[0]
+std_traffic_gt = df_gt["std_traffic_level"].values[0]
+
+mean_traffic_level = df_sol["mean_traffic_level"].values[0]
+std_traffic_level = df_sol["std_traffic_level"].values[0]
+
+
+p1 = (mean_traffic_gt == mean_traffic_level) * 20.0
+p2 = (std_traffic_gt == std_traffic_level) * 20.0
+
+# P3: Compute accuracy
+# ==========
+# Select only the common ids present in both DataFrames
+common_ids = df_gt.index.intersection(df_sol.index)
+
+# Compare the 'result' column from both DataFrames
+# This comparison uses index alignment and compares only rows with the same id
+comparison = df_gt.loc[common_ids, "on_time"] == df_sol.loc[common_ids, "on_time"]
+
+# Calculate overall accuracy (percentage of matching rows)
+accuracy = comparison.mean()
+print(f"Overall Accuracy: {accuracy:.2f}")
 
 # Score accuracy with 0 if accuracy is less than 0.8 and with 60 if accuracy is higher than 0.978
 # linear interpolation
-p2 = min(max(60.0 * (accuracy - 0.8) / 0.178, 0), 60)
+p3 = min(max(60.0 * (accuracy - 0.8) / 0.178, 0), 60)
 
 
 # Compute the final score
-score = p1_total + p2
-print(f"Score: {score:.2f} | P1: {p1_total:.2f}, P1_1:{p1_0}, P1_2: {p1_1} | P2: {p2:.2f}")
+score = p1 + p2 + p3
+print(f"Score: {score:.2f} | P1: {p1}, P2:{p2}, P3: {p3}")
+
+# Optionally, you can see the rows that do not match:
+mismatches = df_gt.loc[common_ids][comparison == False]
+print("Rows with mismatches:")
+print(mismatches)
