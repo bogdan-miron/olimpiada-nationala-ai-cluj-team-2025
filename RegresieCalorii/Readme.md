@@ -1,4 +1,4 @@
-# Predicita consumului caloric
+# Exemplu de problema (predictia preturilor jocurilor de pe platforma Steam)
 
 ## Enunt
 Implementati un model de AI pentru a prezice cosumul caloric a unei activitati avand la dispozitie un set de antrenare `dataset_train.csv` si doua pe care trebuie sa faceti doar predictia: `task1_dataset_eval.csv`. si `task2_dataset_eval.csv`
@@ -30,7 +30,7 @@ Setul de date contine urmatoarele campuri avand semnificatiile:
 - Samples: numarul de linii de input din setul de date de antrenare, folosit in scop de verificare locala
 - No. Males: numarul de date care descriu activitati realizate de barbati
 - Average Duration: durata medie a activitatiilor, aproximata la 2 zecimale
-- SeniorUsers: numarul de utilizatori peste 75 de ani 
+- SeniorUsers: numarul de utilizatori care au implinit 75 de ani 
 
 Fiecare din cele 4 componente valoreaza 10p.
 
