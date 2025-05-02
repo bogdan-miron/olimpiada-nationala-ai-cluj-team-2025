@@ -72,3 +72,11 @@ Trimiteți un singur csv care să conțină răspunsurile pentru toate subtask-u
 ## Exemple de Ground Truth
 
 În  următoarele imagini vor fi prezentate (în  stânga) un exemplu de imagini din arhivă, iar în  dreapta  va fi prezentat Ground-Truthul asociat imaginii. Acest exemplu are rolul de a ajuta concurentul de a face diferență  între ce se consideră `zgomot de fundal (random noise)`, `artefacte din imagine (image artefacts)`, `benzi semi-transparente`, și ce se consideră a fi `HotSpot`. Notă: `HotSpots` pot să fie doar de tip cerc, elipsă, dreptungi și polygon (convex sau concav).
+
+![Imagine 1](examples-gt/img1hotspot.png)
+
+![Imagine 2](examples-gt/img2hotspot.png)
+
+![Imagine 3](examples-gt/img3hotspot.png)
+
+![Imagine 4](examples-gt/img4hotspot.png)
