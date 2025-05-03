@@ -53,7 +53,7 @@ RLE este o metodă de **compresie** pentru măști binare. În loc să se memore
     `start_1 length_1 start_2 length_2 ...`
 
 **Exemplu**:
-Fiecare element este un pixel (`1` = aparține unui HotSopt, `0` = fundal). Pentru o mască binară 2D:
+Fiecare element este un pixel (`1` = aparține unui HotSpot, `0` = fundal). Pentru o mască binară 2D:
 ```
 0 0 0 0
 0 1 1 0
