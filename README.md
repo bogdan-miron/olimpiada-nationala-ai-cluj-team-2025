@@ -85,8 +85,7 @@ Trimiteți un singur csv care să conțină răspunsurile toate cerințele pe ca
 
 ## Exemple de măști valide
 
-În  următoarele imagini vor fi prezentate (în  stânga) un exemplu de imagini din arhivă, iar în  dreapta  va fi prezentat Ground-Truthul asociat imaginii
-<span style="color: green;"> masca binară asociată imaginii</span>
+În  următoarele imagini vor fi prezentate (în  stânga) un exemplu de imagini din arhivă, iar în  dreapta  va fi prezentată masca binară asociată imaginii</span>
 . Aceste exemple au rolul de a ajuta concurentul în a face diferență între ce se consideră `zgomot de fundal aletoriu (random noise)`, `artefacte din imagine (image artefacts)`, `benzi semi-transparente`, și ce se consideră a fi `HotSpot`. 
 
 
