@@ -8,7 +8,7 @@
 O agenție secretă, `Umbrella Corporation`, a dezvoltat un sistem 
 <span style="color: green;"> inteligent </span>
 de analiză vizuală pentru a cartografia aceste HotSpots folosind imagini satelitare modificate. Aceste imagini prezintă diferite forme geometrice 
-(cercuri, elipse, dreptunghiuri și poligoane - convexe sau concave) care reprezintă  așa zisele HotSpots. Însă acest sistem nu funcționează încă perfect pentru că unele imagini sunt afectate de `zgomot de fundal aleatoriu` (*random noise*) și `benzi semi-transparente` (*stripes*) care simulează interferențele radio. </span>
+(cercuri, elipse, dreptunghiuri și poligoane - convexe sau concave) care reprezintă  așa zisele HotSpots. Însă acest sistem nu funcționează încă perfect pentru că unele imagini sunt afectate de `zgomot de fundal aleatoriu` (*random noise*) și `benzi subțiri semi-transparente` (*stripes*) care simulează interferențele radio. </span>
 
 **Misiunea ta este vitală**: la fel ca  în vechile operațiuni din `Orașul Ratonilor`, ai fost activat pentru a identifica acele rare zone cu semnal curat - **HotSpots**. Semnalul e viață. Restul e interferență.
 
