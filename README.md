@@ -55,23 +55,25 @@ RLE este o metodă de **compresie** pentru măști binare. În loc să se memore
 **Exemplu**:
 Fiecare element este un pixel (`1` = aparține unui HotSopt, `0` = fundal). Pentru o mască binară 2D:
 ```
-0 0 1 0
-0 1 1 0
-0 0 1 0
-0 0 1 0
 0 0 0 0
+0 1 1 0
+0 1 1 0
+0 0 0 0
+0 0 1 1
 ```
 
 ordinea *colomn-major* cu începere din colțul stânga sus al matricii este urmatoarea:
-`[0, 0, 0, 0, 0,   0, 1, 0, 0, 0,   1, 1, 1, 1, 0,   0, 0, 0, 0, 0]`
+`[0, 0, 0, 0, 0,   0, 1, 1, 0, 0,   0, 1, 1, 0, 1,   0, 0, 0, 0, 1]`
 
 **Codificare RLE**
-- `7 1` -> secvența de `1` începe de la index 7, având lungimea 1.
-- `11 4` -> secvența de `1` începe de la index 11, având lungimea 4.
+- `7 2` -> secvența de `1` începe de la index 7, având lungimea 2.
+- `12 2` -> secvența de `1` începe de la index 12, având lungimea 2.
+- `15 1` -> secvența de `1` începe de la index 15, având lungimea 1.
+- `20 1` -> secvența de `1` începe de la index 20, având lungimea 1.
 
 **RLE Final**:
 
-`7 1 11 4`
+`7 2 12 2 15 1 20 1`
 
 </details>
 
