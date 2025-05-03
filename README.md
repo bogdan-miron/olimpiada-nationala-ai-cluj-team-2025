@@ -61,10 +61,8 @@ Fiecare element este un pixel (`1` = aparține unui HotSopt, `0` = fundal). Pent
 0 0 1 0
 0 0 0 0
 ```
-<span style="color: green;"> eu aș da ca exemplu o matrice care sa codeze masca pt un patrat sau dreptunghi care nu e lipit de margini (sa fie rama de 0 in jurul lui) </span>
 
-care, în format coloană (flattened column-major) devine: 
-<span style="color: green;">ar fi bine să se folosească aceleași cuvinte pt noțiunea de parcurgere a matricii/imaginii ca sa nu-i bruiem cu exprimari diferite pt acelasi lucru: eu aș zice: ordinea *colomn-major* cu începere din colțul stânga sus al matricii (atât aici, cât și la regula1 de mai sus)</span>
+ordinea *colomn-major* cu începere din colțul stânga sus al matricii este urmatoarea:
 `[0, 0, 0, 0, 0,   0, 1, 0, 0, 0,   1, 1, 1, 1, 0,   0, 0, 0, 0, 0]`
 
 **Codificare RLE**
@@ -83,9 +81,9 @@ Evaluarea se va face folosind **F1-score la nivel de pixel**, comparând masca p
 
 Trimiteți un singur csv care să conțină răspunsurile toate cerințele pe care le-ați rezolvat. Pentru a vedea un exemplu, descărcați fișierul `sample_output.csv`.
 
-## Exemple de măști valide
+## Exemple de măști
 
-În  următoarele imagini vor fi prezentate (în  stânga) un exemplu de imagini din arhivă, iar în  dreapta  va fi prezentată masca binară asociată imaginii</span>
+În  următoarele imagini vor fi prezentate (în  stânga) un exemplu de imagini din arhivă, iar în  dreapta va fi prezentată masca binară asociată imaginii</span>
 . Aceste exemple au rolul de a ajuta concurentul în a face diferență între ce se consideră `zgomot de fundal aletoriu (random noise)`, `artefacte din imagine (image artefacts)`, `benzi semi-transparente`, și ce se consideră a fi `HotSpot`. 
 
 
