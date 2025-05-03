@@ -1,4 +1,4 @@
-# Identificarea figurilor geometrice în imagini
+# Identificarea figurilor geometrice în imagini - enunt vechi, README pentru enunt nou
 
 ## Enunț
 Dezvoltati un algoritm inteligent care să identifice și să localizeze automat diferite figuri geometrice în imagini. 
